@@ -1,0 +1,277 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080817;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(#00ffff0c 1px, transparent 1px),
+    linear-gradient(90deg, #00ffff0c 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header {
+  height: 85px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ffff44;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 900;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.logo span {
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+}
+
+.status {
+  font-size: 11px;
+  color: #00ff99;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 45px 15px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.side-panel {
+  width: 190px;
+  padding: 20px;
+  background: #111126cc;
+  border: 1px solid #00ffff55;
+  box-shadow: 0 0 20px #00ffff15;
+}
+
+.side-panel h2 {
+  font-size: 14px;
+  color: #00ffff;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.info-box {
+  margin-bottom: 22px;
+  padding: 12px;
+  border-left: 2px solid #ff00ff;
+  background: #ffffff08;
+}
+
+.info-box p {
+  font-size: 10px;
+  color: #9999bb;
+  margin-bottom: 8px;
+}
+
+.info-box strong {
+  color: #00ffff;
+  font-size: 23px;
+  text-shadow: 0 0 12px #00ffff;
+}
+
+.side-panel h3 {
+  color: #ff00ff;
+  font-size: 12px;
+  margin: 20px 0 10px;
+}
+
+#next {
+  width: 120px;
+  height: 120px;
+  background: #080817;
+  border: 1px solid #ff00ff66;
+}
+
+.side-buttons {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 12px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00ffff;
+  color: #080817;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.board-area {
+  width: 340px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #00ffff;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.board-wrapper {
+  position: relative;
+  border: 2px solid #00ffff;
+  box-shadow:
+    0 0 15px #00ffff88,
+    inset 0 0 20px #00ffff15;
+  background: #080817;
+}
+
+#game {
+  display: block;
+  width: 300px;
+  height: 600px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #080817eF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 26px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 10px;
+  color: #ff00ff;
+  margin-bottom: 30px;
+}
+
+.overlay button {
+  padding: 16px 25px;
+  background: #00ffff;
+  color: #080817;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.control-item {
+  margin-bottom: 25px;
+}
+
+.control-item span {
+  color: #ff00ff;
+  font-size: 20px;
+}
+
+.control-item p {
+  color: #9999bb;
+  font-size: 10px;
+  margin-top: 7px;
+}
+
+.mobile-controls {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px auto;
+  max-width: 350px;
+}
+
+.mobile-controls button {
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 55px;
+  font-size: 10px;
+  color: #555577;
+  letter-spacing: 2px;
+}
+
+@media(max-width: 800px) {
+  .game-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .board-area {
+    order: -1;
+  }
+
+  .side-panel {
+    width: 145px;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+}
+
+@media(max-width: 380px) {
+  .board-area {
+    transform: scale(0.9);
+    transform-origin: top center;
+    margin-bottom: -60px;
+  }
+
+  header {
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}

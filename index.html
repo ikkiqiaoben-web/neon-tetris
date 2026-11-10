@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080817">
+  <title>NEON TETRIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-grid"></div>
+
+  <header>
+    <div class="logo">NEON<span> TETRIS</span></div>
+    <div class="status">● SYSTEM ONLINE</div>
+  </header>
+
+  <main>
+    <section class="game-container">
+
+      <div class="side-panel">
+        <h2>GAME DATA</h2>
+
+        <div class="info-box">
+          <p>SCORE</p>
+          <strong id="score">000000</strong>
+        </div>
+
+        <div class="info-box">
+          <p>LEVEL</p>
+          <strong id="level">01</strong>
+        </div>
+
+        <div class="info-box">
+          <p>LINES</p>
+          <strong id="lines">00</strong>
+        </div>
+
+        <h3>NEXT BLOCK</h3>
+        <canvas id="next" width="120" height="120"></canvas>
+
+        <div class="side-buttons">
+          <button id="pauseBtn">PAUSE</button>
+          <button id="restartBtn">RESTART</button>
+        </div>
+      </div>
+
+      <div class="board-area">
+        <div class="board-header">
+          <span>NEON ARENA</span>
+          <span id="gameStatus">READY</span>
+        </div>
+
+        <div class="board-wrapper">
+          <canvas id="game" width="300" height="600"></canvas>
+
+          <div id="overlay" class="overlay">
+            <h1 id="overlayTitle">NEON TETRIS</h1>
+            <p id="overlayText">ENTER THE DIGITAL WORLD</p>
+            <button id="startBtn">START GAME</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-panel controls">
+        <h2>CONTROLS</h2>
+
+        <div class="control-item">
+          <span>← →</span>
+          <p>MOVE</p>
+        </div>
+
+        <div class="control-item">
+          <span>↑</span>
+          <p>ROTATE</p>
+        </div>
+
+        <div class="control-item">
+          <span>↓</span>
+          <p>SOFT DROP</p>
+        </div>
+
+        <div class="control-item">
+          <span>SPACE</span>
+          <p>HARD DROP</p>
+        </div>
+
+        <div class="control-item">
+          <span>P</span>
+          <p>PAUSE</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="mobile-controls">
+      <button data-action="left">◀</button>
+      <button data-action="rotate">↻</button>
+      <button data-action="down">▼</button>
+      <button data-action="right">▶</button>
+      <button data-action="drop">⤓</button>
+    </section>
+
+    <footer>
+      NEON TETRIS © 2026 | DIGITAL ARCADE SYSTEM
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
